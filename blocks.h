@@ -1,6 +1,9 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
+
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
+	{"",	"/opt/dwmblocks/programs/spotifytrack",				1,		0},
+	{"/dev/sda3 usage: ", "df -h | grep \"/dev/sda3\" | awk '{print $3\"/\"$2\", \"$5}'",	1,		0},
 	{"Mem: ", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	1,		0},
 	{"CPU: ", "echo $[100-$(vmstat 1 2|tail -1|awk '{print $15}')]%",	1,	0},
 	{"", "date '+%b %d (%a) %I:%M%p'",					60,		0},

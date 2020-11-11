@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 getSong() {
 	pid=$(pgrep -f "/snap/spotify/.+/usr/share/spotify/spotify$")
 	if [ -z "$pid" ]
@@ -14,8 +14,6 @@ getSong() {
 	fi
 }
 
-while (true)
-do
-	getSong 
-done
+getSong 
+
 

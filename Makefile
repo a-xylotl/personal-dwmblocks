@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .POSIX:
 
 PREFIX = /usr/local
@@ -18,21 +17,3 @@ uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dwmblocks
 
 .PHONY: clean install uninstall
-=======
-PREFIX ?= /usr/local
-CC ?= cc
-
-output: dwmblocks.c blocks.def.h blocks.h
-	${CC} `pkg-config --cflags x11 --libs x11` dwmblocks.c -o dwmblocks
-blocks.h:
-	cp blocks.def.h $@
-
-
-clean:
-	rm -f *.o *.gch dwmblocks
-install: output
-	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	install -m 0755 dwmblocks $(DESTDIR)$(PREFIX)/bin/dwmblocks
-uninstall:
-	rm -f $(DESTDIR)$(PREFIX)/bin/dwmblocks
->>>>>>> 1fcea6e36d53d1f7f5800d3319fb313a337beb48

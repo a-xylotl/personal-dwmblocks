@@ -7,12 +7,12 @@ alsa() {
 	if [ "$STATUS" = "off" ]; then
 		printf "🔇"
 	else
-		if [ "$VOL" -gt 0 ] && [ "$VOL" -le 33 ]; then
-            		printf "🔈 %s%%" "$VOL"
+		if [ "$VOL" -ge 0 ] && [ "$VOL" -le 33 ]; then
+            		printf "🔈: %s%%" "$VOL"
         	elif [ "$VOL" -gt 33 ] && [ "$VOL" -le 66 ]; then
-            		printf "🔉 %s%%" "$VOL"
+            		printf "🔉: %s%%" "$VOL"
         	else
-            		printf "🔊 %s%%" "$VOL"
+            		printf "🔊: %s%%" "$VOL"
         	fi
 	fi
     printf "%s\n" "$SEP2"

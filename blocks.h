@@ -2,13 +2,14 @@
 
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
-	{"Volume: ", 	"alsa.sh",		1,			0},
-	{"Weather: ",	"currentweather.sh",	1,			0},
-	{"",		"spotifytrack.sh",	1,			0},
-	{"/dev/sda3 usage: ", "diskusage.sh",	1,			0},
-	{"Mem: ", 	"memoryusage.sh",	1,			0},
-	{"CPU: ", 	"cpuusage.sh",		1,			0},
-	{"Date: ",	"datetime.sh",		60,			0},
+	{"", 		"alsa.sh",		250,			0},
+	{"☁: ",		"currentweather.sh",	60000,			0},
+	{"🏠: ", 	"diskusagehome.sh",	1000,			0},
+	{"🖥: ",	"diskusageroot.sh",	1000,			0},
+	{"",		"batterylevel.sh",	7500,			0},
+	{"🧠: ", 	"memoryusage.sh",	1500,			0},
+	{"⚡: ", 	"cpuusage.sh",		1500,			0},
+	{"📅: ",	"datetime.sh",		60000,			0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.

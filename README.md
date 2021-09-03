@@ -1,7 +1,6 @@
 # dwmblocks
 
 Modular status bar for dwm written in c.
-<<<<<<< HEAD
 
 # Modifying blocks
 
@@ -57,4 +56,3 @@ This is so you can edit your status bar commands and they will not get overwritt
 # patches
 Here are some patches that I have added into my build (this one) of dwmblocks:
 - (none so far, going to add statuscmd patch soon)
->>>>>>> 1fcea6e36d53d1f7f5800d3319fb313a337beb48
